@@ -152,48 +152,48 @@ Follow the on-screen prompts to select spools and enter filament usage.
 
 ## Example Output
 
-```
-Available Spools:
-1. PLA Red (ID: 1) Price: $16.49 Material: PLA Color: ff0000
-2. PLA White (ID: 2) Price: $10.99 Material: PLA Color: ffffff
-3. NYLON GREY (ID: 3) Price: $28.99 Material: NYLON Color: 808080
-4. PETG BLACK (ID: 4) Price: $15.99 Material: PETG Color: 000000
-...
+   ```
+   Available Spools:
+   1. PLA Red (ID: 1) Price: $16.49 Material: PLA Color: ff0000
+   2. PLA White (ID: 2) Price: $10.99 Material: PLA Color: ffffff
+   3. NYLON GREY (ID: 3) Price: $28.99 Material: NYLON Color: 808080
+   4. PETG BLACK (ID: 4) Price: $15.99 Material: PETG Color: 000000
+   ...
 
-Select a spool by number: 1
+   Select a spool by number: 1
 
-Selected Spool: PLA Red
-Spool Cost: $16.49
-Remaining Filament Weight: 912.13 grams
-Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
+   Selected Spool: PLA Red
+   Spool Cost: $16.49
+   Remaining Filament Weight: 912.13 grams
+   Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
 
-Enter filament used for the print (e.g., '100g' or '1.5m'): 100.34g
+   Enter filament used for the print (e.g., '100g' or '1.5m'): 100.34g
 
-Cost for this print: $1.65
+   Cost for this print: $1.65
 
-Do you want to add another spool? (y/n): y
+   Do you want to add another spool? (y/n): y
 
-Select a spool by number: 2
+   Select a spool by number: 2
 
-Selected Spool: PLA White
-Spool Cost: $10.99
-Remaining Filament Weight: 440.00 grams
-Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
+   Selected Spool: PLA White
+   Spool Cost: $10.99
+   Remaining Filament Weight: 440.00 grams
+   Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
 
-Enter filament used for the print (e.g., '100g' or '1.5m'): 53.21m
+   Enter filament used for the print (e.g., '100g' or '1.5m'): 53.21m
 
-Cost for this print: $1.74
+   Cost for this print: $1.74
 
-Do you want to add another spool? (y/n): n
+   Do you want to add another spool? (y/n): n
 
-Summary of Filament Usage:
-Spool Name                       Filament Used       Unit            Cost
----------------------------------------------------------------------------
-PLA Red                                100.34          g            1.65
-PLA White                               53.21          m            1.74
----------------------------------------------------------------------------
-Total Cost:                                                         3.40
-```
+   Summary of Filament Usage:
+   Spool Name                       Filament Used       Unit            Cost
+   ---------------------------------------------------------------------------
+   PLA Red                                100.34          g            1.65
+   PLA White                               53.21          m            1.74
+   ---------------------------------------------------------------------------
+   Total Cost:                                                         3.40
+   ```
 
 ## Contributing
 
