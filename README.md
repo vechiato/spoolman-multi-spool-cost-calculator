@@ -228,7 +228,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 
 - **Spoolman API**: This script utilizes the Spoolman API for fetching spool data. [Spoolman API Documentation](https://donkie.github.io/Spoolman/)
-- **Contributors**: Thanks to everyone who has contributed to this project.
 
 ---
 
