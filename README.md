@@ -112,7 +112,7 @@ Follow the on-screen prompts to select spools and enter filament usage.
    ```
    Available Spools:
    1. PLA Red (ID: 1) Price: $16.49 Material: PLA Color: ff0000
-   2. PLA White (ID: 2) Price: $16.49 Material: PLA Color: ffffff
+   2. PLA White (ID: 2) Price: $10.99 Material: PLA Color: ffffff
    ...
    ```
 
@@ -142,10 +142,10 @@ Follow the on-screen prompts to select spools and enter filament usage.
    Summary of Filament Usage:
    Spool Name                       Filament Used       Unit            Cost
    ---------------------------------------------------------------------------
-   PLA Red                                100.00          g            1.65
-   PLA White                                50.00         m            0.82
+   PLA Red                                100.34          g            1.65
+   PLA White                               53.21          m            1.74
    ---------------------------------------------------------------------------
-   Total Cost:                                                        2.47
+   Total Cost:                                                         3.40
    ```
 
 ## Example Output
@@ -153,7 +153,9 @@ Follow the on-screen prompts to select spools and enter filament usage.
 ```
 Available Spools:
 1. PLA Red (ID: 1) Price: $16.49 Material: PLA Color: ff0000
-2. PLA White (ID: 2) Price: $16.49 Material: PLA Color: ffffff
+2. PLA White (ID: 2) Price: $10.99 Material: PLA Color: ffffff
+3. NYLON GREY (ID: 3) Price: $28.99 Material: NYLON Color: 808080
+4. PETG BLACK (ID: 4) Price: $15.99 Material: PETG Color: 000000
 ...
 
 Select a spool by number: 1
@@ -165,7 +167,7 @@ Remaining Filament Weight: 912.13 grams
 Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
 Estimated Mass per Meter: 2.9821 g/m
 
-Enter filament used for the print (e.g., '100g' or '1.5m'): 100g
+Enter filament used for the print (e.g., '100g' or '1.5m'): 100.34g
 Cost for this spool: $1.65
 
 Do you want to add another spool? (y/n): y
@@ -173,24 +175,24 @@ Do you want to add another spool? (y/n): y
 Select a spool by number: 2
 
 Selected Spool: PLA White
-Spool Cost: $16.49
+Spool Cost: $10.99
 Spool Weight (initial): 1000 grams
-Remaining Filament Weight: 10.00 grams
+Remaining Filament Weight: 440.00 grams
 Material: PLA, Diameter: 1.75 mm, Density: 1.24 g/cm³
 Estimated Mass per Meter: 2.9821 g/m
 
-Enter filament used for the print (e.g., '100g' or '1.5m'): 5g
-Cost for this spool: $0.08
+Enter filament used for the print (e.g., '100g' or '1.5m'): 53.21m
+Cost for this spool: $1.74
 
 Do you want to add another spool? (y/n): n
 
 Summary of Filament Usage:
 Spool Name                       Filament Used       Unit            Cost
 ---------------------------------------------------------------------------
-PLA Red                                100.00          g            1.65
-PLA White                                5.00          g            0.08
+PLA Red                                100.34          g            1.65
+PLA White                               53.21          m            1.74
 ---------------------------------------------------------------------------
-Total Cost:                                                        1.73
+Total Cost:                                                         3.40
 ```
 
 ## Contributing
@@ -231,18 +233,3 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 *This README was created to provide clear instructions and information about the Filament Cost Calculator script. If you have any questions or need further assistance, please feel free to reach out.*
-
-## Additional Notes
-
-- **Default API URL**: The script will use `http://localhost:7912/api/v1` as the default Spoolman API URL if `SPOOLMAN_API_URL` is not set in the `.env` file or environment variables.
-- **Authentication**: If your Spoolman API requires authentication, ensure you set the `SPOOLMAN_API_KEY` in your `.env` file and uncomment the `Authorization` header in the script.
-
-### Example `.env` File
-
-```ini
-# Spoolman API URL (default is http://localhost:7912/api/v1 if not set)
-SPOOLMAN_API_URL=http://192.168.0.106:9712/api/v1
-
-# Spoolman API Key (if required)
-SPOOLMAN_API_KEY=your_api_key_here
-```
