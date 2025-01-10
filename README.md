@@ -113,6 +113,8 @@ Follow the on-screen prompts to select spools and enter filament usage.
    Available Spools:
    1. PLA Red (ID: 1) Price: $16.49 Material: PLA Color: ff0000
    2. PLA White (ID: 2) Price: $10.99 Material: PLA Color: ffffff
+   3. NYLON GREY (ID: 3) Price: $28.99 Material: NYLON Color: 808080
+   4. PETG BLACK (ID: 4) Price: $15.99 Material: PETG Color: 000000
    ...
    ```
 
