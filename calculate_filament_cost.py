@@ -131,13 +131,12 @@ def main():
 
             print(f"\nSelected Spool: {spool_name}")
             print(f"Spool Cost: ${spool_cost:.2f}")
-            print(f"Spool Weight (initial): {spool_weight} grams")
             print(f"Remaining Filament Weight: {remaining_weight:.2f} grams")
             print(f"Material: {spool_material}, Diameter: {diameter_mm} mm, Density: {density} g/cm³")
 
             # Calculate mass per meter
             mass_per_meter = calculate_mass_per_meter(diameter_mm, density)
-            print(f"Estimated Mass per Meter: {mass_per_meter:.4f} g/m")
+            #print(f"Estimated Mass per Meter: {mass_per_meter:.4f} g/m")
 
             # Prompt user for filament usage
             filament_input = input("Enter filament used for the print (e.g., '100g' or '1.34m'): ").strip()
@@ -160,7 +159,7 @@ def main():
                 continue
 
             print_cost = calculate_cost(filament_used_grams, spool_weight, spool_cost)
-            print(f"Cost for this spool: ${print_cost:.2f}")
+            print(f"Cost for this print: ${print_cost:.2f}")
             total_cost += print_cost
 
             # Add to summary
