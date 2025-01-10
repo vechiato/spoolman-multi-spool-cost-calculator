@@ -106,7 +106,7 @@ def main():
             spool_material = spool['filament'].get('material', 'Unknown')
             spool_color = spool['filament'].get('color_hex', 'Unknown')
             print(f"{idx}. {spool_name} (ID: {spool_id}) Price: ${spool_price:.2f} Material: {spool_material} Color: {spool_color}")
-            spool_dict[str(idx)] = spool  # Mapping the selection number to the spool
+            spool_dict[str(idx)] = spool # Mapping the selection number to the spool
 
         total_cost = 0.0
         summary = []

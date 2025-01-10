@@ -1,6 +1,6 @@
 # Filament Cost Calculator
 
-A Python script to calculate the real cost of a 3D print using slicer filament usage and fetching actual costs of each spool from the Spoolman API. This tool helps 3D printing enthusiasts and professionals accurately estimate the filament costs for their prints, considering multiple spools and different units of measurement.
+A Python script to calculate the real cost of a 3D print using slicer filament estimative and fetching actual costs of each spool from the Spoolman API. This tool helps 3D printing enthusiasts and professionals accurately estimate the filament costs for their prints, considering multiple spools and different units of measurement.
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ A Python script to calculate the real cost of a 3D print using slicer filament u
 - **Flexible Units**: Accepts filament usage input in grams or meters, with units specified directly in the input (e.g., `100g`, `50m`).
 - **User-Friendly Interaction**: Provides detailed prompts and error messages to guide the user.
 - **Summary Report**: Displays a formatted summary of all filaments used and their individual costs at the end.
-- **Customizable API URL**: Reads the Spoolman API URL from the `.env` file or defaults to `http://localhost:9712`.
+- **Customizable API URL**: Reads the Spoolman API URL from the `.env` file or defaults to `http://localhost:7912`.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ A Python script to calculate the real cost of a 3D print using slicer filament u
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/filament-cost-calculator.git
+   git clone https://github.com/vechiato/filament-cost-calculator.git
    cd filament-cost-calculator
    ```
 
@@ -71,15 +71,15 @@ A Python script to calculate the real cost of a 3D print using slicer filament u
    Add the following to the `.env` file:
 
    ```ini
-   # Spoolman API URL (default is http://localhost:9712/api/v1 if not set)
-   SPOOLMAN_API_URL=http://your-spoolman-api-url/api/v1
+   # Spoolman API URL (default is http://localhost:7912/api/v1 if not set)
+   SPOOLMAN_API_URL=http://your-spoolman-ip:7912/api/v1
    
    # Spoolman API Key (if required)
    SPOOLMAN_API_KEY=your_api_key_here
    ```
 
    - **SPOOLMAN_API_URL**: Replace `http://your-spoolman-api-url/api/v1` with your actual Spoolman API URL.
-     - If you don't set this variable, the script defaults to `http://localhost:9712/api/v1`.
+     - If you don't set this variable, the script defaults to `http://localhost:7912/api/v1`.
    - **SPOOLMAN_API_KEY**: Replace `your_api_key_here` with your actual Spoolman API key if your API requires authentication.
      - If your API doesn't require authentication, you can leave this unset.
 
