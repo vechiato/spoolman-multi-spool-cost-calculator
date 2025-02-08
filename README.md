@@ -195,6 +195,39 @@ Follow the on-screen prompts to select spools and enter filament usage.
    Total Cost:                                                         3.40
    ```
 
+## Filament Snapshot and Comparison
+
+This feature allows you to take snapshots of the current state of all filaments and compare the filament usage and costs between different snapshots.
+
+### Taking a Snapshot
+
+To take a snapshot of the current state of all filaments, run the following command:
+
+```bash
+python main.py --snapshot
+```
+This command captures the current state of all filaments, including their remaining weights and costs, and stores it with a timestamp.
+
+### Comparing Snapshots
+To compare two snapshots and determine the filament usage and costs spent between them, run the following command:
+
+```bash
+python main.py --compare <snapshot1> <snapshot2>
+```
+Replace <snapshot1> and <snapshot2> with the identifiers of the snapshots you want to compare. The command will display the comparison results, showing the filament usage and costs spent between the two snapshots.
+
+### Example
+1. Take a Snapshot:
+```bash
+python main.py --snapshot
+```
+
+2. Compare Snapshots:
+```bash 
+python main.py --compare snapshot_2025-02-08_10-00-00 snapshot_2025-02-08_15-00-00
+```
+
+
 ## Running Unit Tests
 To ensure the correctness of the code, unit tests have been provided. You can run the tests using the unittest framework.
 
