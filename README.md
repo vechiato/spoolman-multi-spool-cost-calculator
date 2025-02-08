@@ -195,6 +195,32 @@ Follow the on-screen prompts to select spools and enter filament usage.
    Total Cost:                                                         3.40
    ```
 
+## Running Unit Tests
+To ensure the correctness of the code, unit tests have been provided. You can run the tests using the unittest framework.
+
+1. Run the tests:
+```bash
+python -m unittest discover
+```
+2. Measure code coverage:
+```bash
+coverage run -m unittest discover
+```
+3. Generate a coverage report:
+```bash
+coverage report
+```
+
+### Example Coverage Report
+   ```
+   Name                            Stmts   Miss  Cover
+   ---------------------------------------------------
+   filament_calculations.py           38      1    97%
+   test_filament_calculations.py      46      1    98%
+   ---------------------------------------------------
+   TOTAL                              84      2    98%
+   ```
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
