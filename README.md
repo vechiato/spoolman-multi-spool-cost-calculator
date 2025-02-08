@@ -224,10 +224,22 @@ python main.py --snapshot
 
 2. Compare Snapshots:
 ```bash 
-python main.py --compare snapshot_2025-02-08_10-00-00 snapshot_2025-02-08_15-00-00
+python main.py --compare snapshot_2025-02-08_10-00-00.json snapshot_2025-02-08_15-00-00.json
 ```
+This will compare the snapshots taken at 10:00 AM and 3:00 PM on February 8, 2025, and display the filament usage and costs spent between these times.
 
+#### example output 
+```
+Comparing snapshot_2025-02-08_10-00-0.json and snapshot_2025-02-08_15-00-00.json...
 
+Spool ID   Name                           Weight Diff (g)  Cost Used($)
+----------------------------------------------------------------------
+1          PLA RED                                 200.00         3.30
+4          PLA GREY                                 50.00         0.82
+12         PLA ORANGE                              141.45         1.55
+----------------------------------------------------------------------
+TOTAL                                              391.45         5.68
+```
 ## Running Unit Tests
 To ensure the correctness of the code, unit tests have been provided. You can run the tests using the unittest framework.
 
