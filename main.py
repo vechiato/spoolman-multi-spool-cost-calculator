@@ -1,8 +1,6 @@
 # main.py
 
-#import requests
 import argparse
-import datetime
 import os
 from dotenv import load_dotenv
 from filament_calculations import (
@@ -19,9 +17,7 @@ def main():
 
     # Configuration
     # Read the Spoolman API URL from the environment variable or use the default
-    #SPOOLMAN_API_URL="http://192.168.0.106:7912/api/v1"
     SPOOLMAN_API_URL = os.getenv("SPOOLMAN_API_URL", "http://localhost:7912/api/v1")
-
     #API_KEY = os.getenv("SPOOLMAN_API_KEY")  # Ensure your API key is set in the environment
 
     HEADERS = {
@@ -43,12 +39,17 @@ def main():
     )
     args = parser.parse_args()
     if args.snapshot:
-        # Fetch spool data and save a snapshot
-        spools = get_spools(SPOOLMAN_API_URL)
-        if not spools:
-            print("No spools found to snapshot.")
-            return
-        save_snapshot(spools)
+        try:
+            # Fetch spool data and save a snapshot
+            spools = get_spools(SPOOLMAN_API_URL)
+            if not spools:
+                print("No spools found to snapshot.")
+                return
+            
+            save_snapshot(spools)
+
+        except Exception as e:
+            print(f"An error occurred: {e}")
     elif args.compare:
         # Compare two snapshot files
         snapshot1, snapshot2 = args.compare
@@ -153,10 +154,6 @@ def main():
 
         except Exception as e:
             print(f"An error occurred: {e}")
-            # how can i see the full error message? and the line it happened on
-
-
-          
 
 if __name__ == "__main__":
     main()
