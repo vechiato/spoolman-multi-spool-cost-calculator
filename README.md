@@ -24,6 +24,7 @@ A Python script to calculate the real cost of a 3D print using slicer filament e
 - **User-Friendly Interaction**: Provides detailed prompts and error messages to guide the user.
 - **Summary Report**: Displays a formatted summary of all filaments used and their individual costs at the end.
 - **Customizable API URL**: Reads the Spoolman API URL from the `.env` file or defaults to `http://localhost:7912`.
+- **Filament Snapshot & Comparison**: Captures the current state of all filaments and compares snapshots to show usage and cost differences over time.
 
 ## Prerequisites
 
@@ -51,7 +52,7 @@ A Python script to calculate the real cost of a 3D print using slicer filament e
    pip install -r requirements.txt
    ```
 
-   **Note**: The `requirements.txt` file should contain:
+   **Note**: The `requirements.txt` file should contain at least:
 
    ```
    requests
@@ -88,7 +89,7 @@ A Python script to calculate the real cost of a 3D print using slicer filament e
 Run the script using Python:
 
 ```bash
-python calculate_filament_cost.py
+python main.py
 ```
 
 Follow the on-screen prompts to select spools and enter filament usage.
@@ -228,7 +229,7 @@ python main.py --compare snapshot_2025-02-08_10-00-00.json snapshot_2025-02-08_1
 ```
 This will compare the snapshots taken at 10:00 AM and 3:00 PM on February 8, 2025, and display the filament usage and costs spent between these times.
 
-#### example output 
+#### Example output 
 ```
 Comparing snapshot_2025-02-08_10-00-0.json and snapshot_2025-02-08_15-00-00.json...
 
